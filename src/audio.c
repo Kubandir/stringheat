@@ -34,7 +34,11 @@ void audio_note_on(int channel, int preset, int note, float velocity)
 {
     if (!g_synth)
         return;
-    tsf_channel_set_presetnumber(g_synth, channel, preset, channel == 9);
+
+    // For channel 9 (drums), always use bank 128 (drum kit)
+    // For other channels, use bank 0 (melodic instruments)
+    int is_drum = (channel == 9);
+    tsf_channel_set_bank_preset(g_synth, channel, is_drum ? 128 : 0, preset);
     tsf_channel_note_on(g_synth, channel, note, velocity);
 }
 
