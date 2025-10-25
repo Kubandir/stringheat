@@ -40,7 +40,7 @@ make         # Build optimized binary
 - **Dependencies:** TinySoundFont (TSF) for synthesis
 - **Output:** 44.1kHz 16-bit stereo WAV
 - **Encoding:** Custom RIFF chunk with XOR-encrypted metadata
-- **Binary Size:** ~260KiB (stripped and UPX compressed, includes embedded soundfont)
+- **Binary Size:** ~260KB (stripped and UPX compressed, includes embedded soundfont)
 - **Text Normalization:** Auto-converts to lowercase a-z and spaces (strips punctuation, numbers, diacritics)
 - **Standalone:** Single binary, no runtime dependencies
   
