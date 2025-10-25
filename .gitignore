@@ -1,0 +1,11 @@
+bin/
+*.o
+src/tsf.h
+src/tml.h
+src/miniaudio.h
+soundfont.sf2
+src/soundfont_data.c
+.vscode/
+.idea/
+*.swp
+*~
